@@ -1,6 +1,8 @@
 FROM node:10-alpine
 
-WORKDIR /urs/app
+ENV NODE_ENV development
+
+WORKDIR /usr/app
 
 COPY package.json .
 
@@ -11,4 +13,3 @@ COPY src src
 COPY public public
 
 CMD ["npm","start"]
-
